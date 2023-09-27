@@ -29,13 +29,14 @@ function Toast({ id, type, children }) {
       </div>
       <p className={styles.content}>{children}</p>
       <button
+        aria-label="Dismiss message"
+        aria-live="off"
         className={styles.closeButton}
         onClick={() => {
           removeToast(id);
         }}
       >
         <X size={24} />
-        <VisuallyHidden>Dismiss message</VisuallyHidden>
       </button>
     </div>
   );
